@@ -1,0 +1,25 @@
+.card{
+
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  padding: 60px;
+  border-radius: 5px;
+  margin-top: 10%;
+  margin-right: 10%;
+
+}
+
+.page{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+.welcome{
+  display: flex;
+  background-color: blue;
+
+  height: 100%;
+}

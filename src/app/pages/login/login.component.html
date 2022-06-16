@@ -1,0 +1,41 @@
+<div class="page">
+  <div class="welcome">
+    <img
+      src="https://www.dualshockers.com/static/uploads/2018/12/dd8c0020f5c9.jpeg"
+    />
+  </div>
+
+  <div class="card">
+    <h1>Inicia sesión</h1>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Email o nombre de usuario </mat-label>
+      <input
+        matInput
+        placeholder="Email"
+        name="email"
+        [(ngModel)]="loginDto.emailOrUsername"
+        required
+      />
+      <mat-error *ngIf="email.invalid">{{ getErrorMessage() }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Contraseña</mat-label>
+      <input
+        placeholder="Contraseña"
+        name="password"
+        matInput
+        [type]="hide ? 'password' : 'text'"
+        [(ngModel)]="loginDto.password"
+      />
+      <mat-icon matSuffix (click)="hide = !hide">{{
+        hide ? "visibility_off" : "visibility"
+      }}</mat-icon>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="doLogin()">
+      Entrar
+    </button>
+  </div>
+</div>
